@@ -6,12 +6,12 @@ import requests
 UNSPLASH_ACCESS_KEY = "YOUR_UNSPLASH_ACCESS_KEY"
 
 def get_unsplash_trending():
-    print("🔎 Sending request to Unsplash...")
+    print("Sending request to Unsplash...")
     url = "https://api.unsplash.com/photos"
     params = {"order_by": "popular", "per_page": 10}
     headers = {"Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"}
     response = requests.get(url, headers=headers, params=params)
-    print("📥 Response received:", response.status_code)
+    print("Response received:", response.status_code)
 
     trending_keywords = []
     if response.status_code == 200:
