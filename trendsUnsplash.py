@@ -49,7 +49,7 @@ def save_results_to_txt(terms, filename="trending_terms.txt"):
         f.write("=" * 50 + "\n\n")
         for rank, term in enumerate(terms, start=1):
             f.write(f"{rank}. {term}\n")
-    print(f"📄 Results saved to {filename}")
+    print(f"Results saved to {filename}")
 
 # ---------------------------
 # MAIN
